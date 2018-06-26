@@ -10,13 +10,10 @@
 	<script type="text/javascript">
         //修改商品提交
         function updateItems(){
-
             //将form的action指向删除商品的地址
             document.itemsForm.action="${pageContext.request.contextPath }/items/editItemsListSubmit.action";
-
             //进行form提交
             document.itemsForm.submit();
-
         }
 	</script>
 </head>
@@ -30,9 +27,7 @@
 				<select>
 					<c:forEach items="${itemsType }" var="item">
 						<option value="${item.key }">${item.value }</option>
-
 					</c:forEach>
-
 				</select>
 			</td>
 			<td><input type="submit" value="查询"/>
@@ -55,12 +50,9 @@
 				<td><input type="text" name="itemsList[${s.index }].price" value="${item.price }"/></td>
 				<td><fmt:formatDate value="${item.createtime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 				<td>${item.detail }</td>
-
 				<td><a href="${pageContext.request.contextPath }/items/editItems.action?id=${item.id}">修改</a></td>
-
 			</tr>
 		</c:forEach>
-
 	</table>
 </form>
 </body>
