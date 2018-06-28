@@ -26,6 +26,23 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <filter>
+        <filter-name>shiroFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+        <init-param>
+            <param-name>targetFilterLifecycle</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>targetBeanName</param-name>
+            <param-value>shiroFilter</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>shiroFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <!-- 前端 控制器 -->
     <servlet>
         <servlet-name>springmvc</servlet-name>
@@ -38,8 +55,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>springmvc</servlet-name>
-        <!-- *.action 以.action结尾 url由DispatcherServlet解析 / 所以的url都由DispatcherServlet解析，使用/方式实现restful，有个问题：也将静态资源（js,jpg..）
-            /* 此种方式在注解开发有问题，会对jsp路径进行解析，报错，不用 -->
         <url-pattern>*.action</url-pattern>
     </servlet-mapping>
 
