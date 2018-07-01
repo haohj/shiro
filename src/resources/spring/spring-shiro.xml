@@ -29,6 +29,7 @@
                 /styles/** = anon
                 <!--请求logout.action地址，shiro会自动清除session-->
                 /logout.action = logout
+                /item/queryItems.action = perms[item:query]
                 /** = authc
             </value>
         </property>
