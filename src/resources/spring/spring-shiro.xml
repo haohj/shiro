@@ -26,7 +26,7 @@
                 <!--配置静态资源可以匿名访问-->
                 /images/** = anon
                 /js/** = anon
-                /style/** = anon
+                /styles/** = anon
                 <!--请求logout.action地址，shiro会自动清除session-->
                 /logout.action = logout
                 /** = authc

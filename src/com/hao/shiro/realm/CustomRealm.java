@@ -44,6 +44,7 @@ public class CustomRealm extends AuthorizingRealm {
         ActiveUser activeUser = new ActiveUser();
         activeUser.setUserid("zhangsan");
         activeUser.setUsercode("zhangsan");
+        activeUser.setUsername("张三");
 
         //根据用户id获取菜单
         List<SysPermission> menuList = null;
