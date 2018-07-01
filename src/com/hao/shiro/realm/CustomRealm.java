@@ -5,10 +5,12 @@ import com.hao.shiro.po.SysPermission;
 import com.hao.shiro.service.SysService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CustomRealm extends AuthorizingRealm {
@@ -67,6 +69,18 @@ public class CustomRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principal) {
-        return null;
+        ActiveUser activeUser = (ActiveUser) principal.getPrimaryPrincipal();
+
+        //模拟从数据库中查询权限
+        List<String> permissions = new ArrayList<String>();
+        permissions.add("user:create");//用户的创建
+//        permissions.add("item:query");//商品查询权限
+        permissions.add("item:add");//商品添加权限
+        permissions.add("item:edit");//商品修改权限
+
+        SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
+        simpleAuthorizationInfo.addStringPermissions(permissions);
+
+        return simpleAuthorizationInfo;
     }
 }

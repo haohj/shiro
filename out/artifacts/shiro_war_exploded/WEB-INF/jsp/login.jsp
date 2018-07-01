@@ -69,13 +69,13 @@
 							<TD><input type="password" id="pwd" name="password" style="WIDTH: 130px" />
 							</TD>
 						</TR>
-						<TR>
+						<%--<TR>
 							<TD>验证码：</TD>
 							<TD><input id="randomcode" name="randomcode" size="8" /> <img
 								id="randomcode_img" src="${baseurl}validatecode.jsp" alt=""
 								width="56" height="20" align='absMiddle' /> <a
 								href=javascript:randomcode_refresh()>刷新</a></TD>
-						</TR>
+						</TR>--%>
 
 						<TR>
 							<TD colSpan="2" align="center"><input type="button"
