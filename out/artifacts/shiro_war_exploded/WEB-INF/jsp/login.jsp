@@ -62,7 +62,7 @@
 						<TR>
 							<TD>用户名：</TD>
 							<TD colSpan="2"><input type="text" id="usercode"
-								name="usercode" style="WIDTH: 130px" /></TD>
+								name="username" style="WIDTH: 130px" /></TD>
 						</TR>
 						<TR>
 							<TD>密 码：</TD>
