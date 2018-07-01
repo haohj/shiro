@@ -42,20 +42,11 @@ public class LoginController {
 			} else if (IncorrectCredentialsException.class.getName().equals(
 					exceptionClassName)) {
 				throw new CustomException("用户名/密码错误");
-			} else if("randomCodeError".equals(exceptionClassName)){
-				throw new CustomException("验证码错误");
-			} else{
+			}else{
 				throw new Exception();//最终在异常处理器生成未知错误
 			}
 		}
+		//验证失败还回到login页面
 		return "login";
-	}
-	//退出
-	@RequestMapping("/logout")
-	public String logout(HttpSession httpSession) throws Exception{
-		//清空session
-		httpSession.invalidate();
-		
-		return "redirect:first.action";
 	}
 }

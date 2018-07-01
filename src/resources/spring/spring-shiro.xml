@@ -16,9 +16,12 @@
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <property name="securityManager" ref="securityManager"/>
         <property name="loginUrl" value="/login.action"></property>
+        <property name="successUrl" value="/first.action"></property>
         <property name="unauthorizedUrl" value="/refuse.jsp"></property>
         <property name="filterChainDefinitions">
             <value>
+                <!--请求logout.action地址，shiro会自动清除session-->
+                /logout.action = logout
                 /images/** = anon
                 /js/** = anon
                 /style/** = anon
