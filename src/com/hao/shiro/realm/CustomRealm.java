@@ -2,12 +2,14 @@ package com.hao.shiro.realm;
 
 import com.hao.shiro.po.ActiveUser;
 import com.hao.shiro.po.SysPermission;
+import com.hao.shiro.po.SysUser;
 import com.hao.shiro.service.SysService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -39,14 +41,20 @@ public class CustomRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         //身份信息，用户名
         String username = (String) token.getPrincipal();
-
+        SysUser user = null;
+        try {
+            user = sysService.findSysUserByUserCode(username);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         //根据用户名从数据库中查询用户
-        String password = "123456";
+        String password = user.getPassword();
+        String salt = user.getSalt();
 
         ActiveUser activeUser = new ActiveUser();
-        activeUser.setUserid("zhangsan");
-        activeUser.setUsercode("zhangsan");
-        activeUser.setUsername("张三");
+        activeUser.setUserid(user.getId());
+        activeUser.setUsercode(user.getUsercode());
+        activeUser.setUsername(user.getUsername());
 
         //根据用户id获取菜单
         List<SysPermission> menuList = null;
@@ -57,7 +65,7 @@ public class CustomRealm extends AuthorizingRealm {
         }
         activeUser.setMenus(menuList);
 
-        SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(activeUser, password, this.getName());
+        SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(activeUser, password, ByteSource.Util.bytes(salt), this.getName());
         return simpleAuthenticationInfo;
     }
 
