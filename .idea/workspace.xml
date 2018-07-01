@@ -7,8 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d1b711-834a-4fe4-a99f-6bd79c6405ef" name="Default" comment="整合shiro">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shiro_war_exploded/WEB-INF/classes/com/hao/shiro/controller/FirstAction.class" afterPath="$PROJECT_DIR$/out/artifacts/shiro_war_exploded/WEB-INF/classes/com/hao/shiro/controller/FirstAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shiro_war_exploded/WEB-INF/classes/com/hao/shiro/controller/LoginController.class" afterPath="$PROJECT_DIR$/out/artifacts/shiro_war_exploded/WEB-INF/classes/com/hao/shiro/controller/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/shiro/com/hao/shiro/controller/FirstAction.class" afterPath="$PROJECT_DIR$/out/production/shiro/com/hao/shiro/controller/FirstAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/shiro/com/hao/shiro/controller/LoginController.class" afterPath="$PROJECT_DIR$/out/production/shiro/com/hao/shiro/controller/LoginController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hao/shiro/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/com/hao/shiro/controller/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shiro_war_exploded/WEB-INF/jsp/first.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shiro_war_exploded/WEB-INF/jsp/first.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/spring/spring-shiro.xml" afterPath="$PROJECT_DIR$/src/resources/spring/spring-shiro.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -68,7 +72,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hao/shiro/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
@@ -81,8 +85,18 @@
       <file leaf-file-name="spring-shiro.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/spring/spring-shiro.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="166">
+              <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="first.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/first.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1820">
+              <caret line="103" column="82" lean-forward="false" selection-start-line="103" selection-start-column="82" selection-end-line="103" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -163,8 +177,8 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/com/hao/shiro/realm/CustomRealm.java" />
         <option value="$PROJECT_DIR$/src/resources/spring/springmvc.xml" />
-        <option value="$PROJECT_DIR$/src/resources/spring/spring-shiro.xml" />
         <option value="$PROJECT_DIR$/src/com/hao/shiro/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/resources/spring/spring-shiro.xml" />
       </list>
     </option>
   </component>
@@ -573,11 +587,18 @@
       <option name="project" value="LOCAL" />
       <updated>1530448649800</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="整合shiro">
+      <created>1530450706226</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1530450706226</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23826000" />
+    <option name="totallyTimeSpent" value="24166000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1299" height="784" extended-state="6" />
@@ -985,14 +1006,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/first.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="103" column="82" lean-forward="false" selection-start-line="103" selection-start-column="82" selection-end-line="103" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hao/shiro/controller/ItemController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -1047,18 +1060,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/spring/spring-shiro.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hao/shiro/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/spring/spring-shiro.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/first.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1820">
+          <caret line="103" column="82" lean-forward="false" selection-start-line="103" selection-start-column="82" selection-end-line="103" selection-end-column="82" />
           <folding />
         </state>
       </provider>

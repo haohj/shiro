@@ -20,11 +20,12 @@
         <property name="unauthorizedUrl" value="/refuse.jsp"></property>
         <property name="filterChainDefinitions">
             <value>
-                <!--请求logout.action地址，shiro会自动清除session-->
-                /logout.action = logout
+                <!--配置静态资源可以匿名访问-->
                 /images/** = anon
                 /js/** = anon
                 /style/** = anon
+                <!--请求logout.action地址，shiro会自动清除session-->
+                /logout.action = logout
                 /** = authc
             </value>
         </property>

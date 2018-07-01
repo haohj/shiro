@@ -10,7 +10,7 @@
     <LINK rel="stylesheet" type="text/css" href="${baseurl}js/easyui/styles/default.css">
     <%@ include file="/WEB-INF/jsp/common_css.jsp" %>
     <%@ include file="/WEB-INF/jsp/common_js.jsp" %>
-    <SCRIPT type="text/javascript">
+    <script type="text/javascript">
         var tabOnSelect = function (title) {
             //根据标题获取tab对象
             var currTab = $('#tabs').tabs('getTab', title);
@@ -58,9 +58,7 @@
         function showhelp() {
             window.open('${baseurl}help/help.html', '帮助文档');
         }
-    </SCRIPT>
-
-
+    </script>
     <META name="GENERATOR" content="MSHTML 9.00.8112.16540">
 </HEAD>
 
