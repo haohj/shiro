@@ -40,5 +40,13 @@
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
         <property name="realm" ref="customRealm"></property>
     </bean>
-    <bean id="customRealm" class="com.hao.shiro.realm.CustomRealm"></bean>
+    <bean id="customRealm" class="com.hao.shiro.realm.CustomRealm">
+        <property name="credentialsMatcher" ref="credentialsMatcher"></property>
+    </bean>
+
+    <!-- 凭证匹配器 -->
+    <bean id="credentialsMatcher" class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+        <property name="hashAlgorithmName" value="md5"></property>
+        <property name="hashIterations" value="1"></property>
+    </bean>
 </beans>
