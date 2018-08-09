@@ -8,7 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="72d1b711-834a-4fe4-a99f-6bd79c6405ef" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hao/shiro/realm/CustomRealm.java" afterPath="$PROJECT_DIR$/src/com/hao/shiro/realm/CustomRealm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hao/shiro/controller/ItemController.java" afterPath="$PROJECT_DIR$/src/com/hao/shiro/controller/ItemController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CustomRealm.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomRealm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hao/shiro/realm/CustomRealm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="229">
+              <caret line="108" column="1" lean-forward="true" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SysPermission.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hao/shiro/po/SysPermission.java">
+      <file leaf-file-name="ItemController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/hao/shiro/controller/ItemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="23" />
+            <state relative-caret-position="909">
+              <caret line="140" column="56" lean-forward="false" selection-start-line="140" selection-start-column="52" selection-end-line="140" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -138,7 +138,6 @@
         <option value="$PROJECT_DIR$/src/resources/commonURL.properties" />
         <option value="$PROJECT_DIR$/src/com/hao/shiro/controller/interceptor/PermissionInterceptor.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/first.jsp" />
-        <option value="$PROJECT_DIR$/src/com/hao/shiro/controller/ItemController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/item/itemsList.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/com/hao/shiro/realm/CustomFormAuthenticationFilter.java" />
@@ -148,6 +147,7 @@
         <option value="$PROJECT_DIR$/src/resources/spring/springmvc.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/lib/shiro-core-1.2.3.jar!/org/apache/shiro/authz/SimpleAuthorizationInfo.class" />
         <option value="$PROJECT_DIR$/src/com/hao/shiro/realm/CustomRealm.java" />
+        <option value="$PROJECT_DIR$/src/com/hao/shiro/controller/ItemController.java" />
       </list>
     </option>
   </component>
@@ -531,7 +531,7 @@
       <workItem from="1529996276451" duration="34000" />
       <workItem from="1531152720417" duration="651000" />
       <workItem from="1531190703278" duration="2490000" />
-      <workItem from="1533783478150" duration="6253000" />
+      <workItem from="1533783478150" duration="7037000" />
     </task>
     <task id="LOCAL-00001" summary="整合shiro">
       <created>1530447976739</created>
@@ -673,11 +673,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533796940752</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="修改自定义realm">
+      <created>1533796997124</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1533796997124</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41497000" />
+    <option name="totallyTimeSpent" value="42281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1299" height="784" extended-state="6" />
@@ -950,16 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hao/shiro/controller/ItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="84" column="17" lean-forward="false" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/item/itemsList.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -1074,6 +1071,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#10650#10651#0" expanded="false" />
+            <element signature="e#10717#10718#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1173,14 +1174,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hao/shiro/po/SysPermission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/shiro-core-1.2.3.jar!/org/apache/shiro/authz/SimpleAuthorizationInfo.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-567">
@@ -1189,13 +1182,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hao/shiro/po/SysPermission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hao/shiro/realm/CustomRealm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="229">
+          <caret line="108" column="1" lean-forward="true" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hao/shiro/controller/ItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="909">
+          <caret line="140" column="56" lean-forward="false" selection-start-line="140" selection-start-column="52" selection-end-line="140" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>

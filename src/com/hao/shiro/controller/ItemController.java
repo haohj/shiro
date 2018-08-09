@@ -30,7 +30,6 @@ public class ItemController {
     //单独将商品类型的方法提出来，将方法返回值填充到request，在页面显示
     @ModelAttribute("itemsType")
     public Map<String, String> getItemsType() throws Exception {
-
         HashMap<String, String> itemsType = new HashMap<String, String>();
         itemsType.put("001", "数码");
         itemsType.put("002", "服装");
