@@ -33,6 +33,8 @@ public class LoginController {
             } else if (IncorrectCredentialsException.class.getName().equals(
                     exceptionClassName)) {
                 throw new CustomException("用户名/密码错误");
+            } else if ("randomCodeError".equals(exceptionClassName)) {
+                throw new CustomException("验证码错误");
             } else {
                 throw new Exception();//最终在异常处理器生成未知错误
             }
