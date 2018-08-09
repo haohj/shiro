@@ -15,16 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
-/**
- * <p>Title: LoginController</p>
- * <p>Description: 用户登陆</p>
- * <p>Company: www.itcast.com</p>
- *
- * @version 1.0
- * @author 传智.燕青
- * @date 2015-2-9下午5:42:03
- */
 @Controller
 public class LoginController {
 
