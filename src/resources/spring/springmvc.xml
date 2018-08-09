@@ -19,6 +19,13 @@
     <!-- 使用 mvc:annotation-driven代替上边定义的处理器适配器和处理器映射器 -->
     <mvc:annotation-driven conversion-service="conversionService"/>
 
+    <!--开启aop，对类代理-->
+    <aop:config proxy-target-class="true"></aop:config>
+    <!--开启shiro注解支持-->
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"></property>
+    </bean>
+
     <!-- 转换器 -->
     <bean id="conversionService"
           class="org.springframework.format.support.FormattingConversionServiceFactoryBean">

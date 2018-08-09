@@ -47,22 +47,29 @@ public class CustomRealm extends AuthorizingRealm {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //根据用户名从数据库中查询用户
+
+        //判断账号是否存在
+        if (user == null) {
+            return null;
+        }
+
+        //根据用户id获取菜单
+        List<SysPermission> menuList = null;
+        try {
+            menuList = sysService.findMenuListByUserId(user.getId());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        //获取用户密码
         String password = user.getPassword();
+        //盐
         String salt = user.getSalt();
 
         ActiveUser activeUser = new ActiveUser();
         activeUser.setUserid(user.getId());
         activeUser.setUsercode(user.getUsercode());
         activeUser.setUsername(user.getUsername());
-
-        //根据用户id获取菜单
-        List<SysPermission> menuList = null;
-        try {
-            menuList = sysService.findMenuListByUserId(activeUser.getUserid());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         activeUser.setMenus(menuList);
 
         SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(activeUser, password, ByteSource.Util.bytes(salt), this.getName());
@@ -79,15 +86,24 @@ public class CustomRealm extends AuthorizingRealm {
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principal) {
         ActiveUser activeUser = (ActiveUser) principal.getPrimaryPrincipal();
 
-        //模拟从数据库中查询权限
-        List<String> permissions = new ArrayList<String>();
-        permissions.add("user:create");//用户的创建
-//        permissions.add("item:query");//商品查询权限
-        permissions.add("item:add");//商品添加权限
-        permissions.add("item:edit");//商品修改权限
+        //用户id
+        String userId = activeUser.getUserid();
 
+        //模拟从数据库中查询权限
+        List<SysPermission> permissions = null;
+
+        try {
+            permissions = sysService.findPermissionListByUserId(userId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        //构建shiro授权信息
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
-        simpleAuthorizationInfo.addStringPermissions(permissions);
+
+        for (SysPermission sysPermission : permissions) {
+            simpleAuthorizationInfo.addStringPermission(sysPermission.getPercode());
+        }
 
         return simpleAuthorizationInfo;
     }
